@@ -5,23 +5,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css -->
     <link href="/dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon2.png">
     <title>Apple Store || Grand Session || Final JavaScript Project </title>
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="card w-96 bg-base-100 shadow-xl">
-        <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
-        <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+    <header>
+        <div class="navbar bg-slate-500 py-4 lg:px-28 md:px-20">
+            <div class="flex-1">
+                <a
+                    class="flex  items-center justify-center text-white cursor-pointer normal-case text-2xl font-semibold">
+                    <img class="w-8 mr-2" src="./assets/images/favicon1.png" alt="" srcset="">
+                    <span>Apple Store</span>
+                </a>
+            </div>
+            <div class="flex-none">
+                <!-- navigation menu is here -->
+                <div class="">
+                    <ul class="p-2 hidden md:flex items-center justify-center">
+                        <li class="text-white mr-6 cursor-pointer text-sm">
+                            <span><i class="fas fa-home mr-1"></i></span>
+                            <span>Home</span>
+                        </li>
+                        <li class="text-white mr-6 cursor-pointer text-sm">
+                            <span><i class="fa fa-heart mr-1"></i></span>
+                            <span>Wishlist</span>
+                        </li>
+                        <li class="text-white mr-6 cursor-pointer">
+                            <span><i class="fas fa-trash mr-1"></i></span>
+                            <span>Recycle Bin</span>
+                        </li>
+                        <li class="relative text-white mr-6 cursor-pointer text-sm">
+                            <span class="absolute bottom-4 left-0">
+                                <div class="badge p-1 badge-secondary">+9</div>
+                            </span>
+                            <span><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <span></span>
+                        <div class="w-10 rounded-full">
+                            <img src="https://placeimg.com/80/80/people" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+
+                        <li class="mb-2"><a>
+                                <span><i class="fas fa-home"></i></span>
+                                <span>Home</span>
+                            </a></li>
+                        <li><a>
+                                <span><i class="fa fa-heart"></i></span>
+                                <span>Wishlist</span>
+                            </a></li>
+                        <li class="mb-2"><a>
+                                <span><i class="fas fa-trash"></i></span>
+                                <span>Recycle Bin</span>
+                            </a></li>
+                        <li class="mb-2"><a>
+                                <span class="absolute top-[-5px] rigtht-[3px]">
+                                    <div class="badge p-1 badge-secondary">+9</div>
+                                </span>
+                                <span><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
+                                <span>Cart</span>
+                            </a></li>
+                        <li class="mb-2">
+                            <a>
+                                <span><i class="fa-solid fa-user"></i></span>
+                                <span>Profile</span>
+                            </a>
+                        </li>
+                        <li class="mb-2"><a>
+                                <span><i class="fa-solid fa-gear"></i></span>
+                                <span>Setting</span>
+                            </a></li>
+                        <li><a>
+                                <span><i class="fa-solid fa-right-from-bracket"></i></span>
+                                <span>Logout</span>
+                            </a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 </body>
 
 </html>
