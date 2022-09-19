@@ -41,10 +41,12 @@
                             <span>Recycle Bin</span>
                         </li>
                         <li class="relative text-white mr-6 cursor-pointer text-sm">
-                            <span class="absolute bottom-4 left-0">
-                                <div class="badge p-1 badge-secondary">+9</div>
+                            <span class="absolute bottom-4 left-3">
+                                <div class="badge p-1 badge-secondary">+ <span id="badge-count">0</span></div>
                             </span>
-                            <span><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
+                            <label for="my-drawer-4" class="drawer-button cursor-pointer">
+                                <span><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
+                            </label>
                         </li>
                     </ul>
                 </div>
@@ -70,12 +72,15 @@
                                 <span><i class="fas fa-trash"></i></span>
                                 <span>Recycle Bin</span>
                             </a></li>
+
                         <li class="mb-2"><a>
-                                <span class="absolute top-[-5px] rigtht-[3px]">
-                                    <div class="badge p-1 badge-secondary">+9</div>
-                                </span>
-                                <span><i class="fa-sharp fa-solid fa-cart-shopping"></i></span>
-                                <span>Cart</span>
+                                <label for="my-drawer-4" class="drawer-button cursor-pointer">
+                                    <span class="absolute top-[-5px] rigtht-[3px]">
+                                        <div class="badge p-1 badge-secondary">+0</div>
+                                    </span>
+                                    <span><i class="fa-sharp fa-solid fa-cart-shopping mr-2"></i></span>
+                                    <span>Cart</span>
+                                </label>
                             </a></li>
                         <li class="mb-2">
                             <a>
@@ -96,6 +101,117 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <!-- drawer starts here -->
+        <div class="drawer drawer-end">
+            <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content mx-auto mt-[50px]">
+                <!-- Page content here -->
+                <h1 class="text-center text-5xl font-bold py-5 my-5">All Products</h1>
+                <div id="homepage-content"
+                    class="grid  lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 max-w-[1300px] mx-8 md:mx-auto">
+                    <!-- single card in product -->
+                    <!-- <div class="card w-96 bg-base-100 shadow-2xl">
+                        <div class="p-4">
+                            <figure>
+                                <img class="rounded-md" src="https://placeimg.com/400/225/arch" alt="Shoes" />
+                            </figure>
+                        </div>
+                        <div class="card-body ">
+                            <div class="flex items-center justify-between">
+                                <h2 class="card-title">Shoes!</h2>
+                                <div class="text-lg">
+                                    <span class="mr-2 cursor-pointer text-red-400"><i class="fa fa-heart"></i></span>
+                                    <span class="cursor-pointer text-red-700"><i class="fas fa-minus-square"></i></span>
+                                </div>
+                            </div>
+                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                            <div class="flex items-center justify-between ">
+                               // The button to open modal
+                    <label for="my-modal-3" class="btn modal-button btn-outline btn-primary w-[45%]">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Details
+                    </label>
+                    <button class="btn btn-outline btn-secondary w-[45%]">
+                        <i class="fas fa-sack-dollar mr-2"></i>
+                        Buy Now
+                    </button>
+                </div>
+            </div>
+        </div> -->
+
+                </div>
+                <!-- open modal product details -->
+                <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+                <div class="modal">
+                    <div class="modal-box relative">
+                        <label for="my-modal-3" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                        <!-- modal information -->
+                        <div id="modal-info" class="py-3 flex flex-col gap-3">
+                            <!--dynamic to script-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="drawer-side">
+                <label for="my-drawer-4" class="drawer-overlay"></label>
+                <ul class="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                    <!-- Sidebar content here -->
+                    <div>
+                        <h1 class="text-2xl text-center mb-4 font-bold text-yellow-500">Cart Items</h1>
+                        <div id="cart-items" class="flex flex-col gap-3">
+                            <!--dynamic cart list-->
+                            <!-- <div class="rounded-md flex items-center justify-between p-2 border-2 border-purple-400">
+                                <div class="flex items-center">
+                                    <img class=" h-[35px] w-[35px] rounded-sm"
+                                        src="./assets/images/product-placeholder.png" alt="" srcset="">
+                                    <span class="ml-3">Name</span>
+                                </div>
+                                <h3>Quantity</h3>
+                                <button class="text-red-600"><i class="fas fa-trash mr-1"></i></button>
+                            </div> -->
+
+                        </div>
+                        <div class="flex justify-center my-4">
+                            <button onclick="clearCart()" class="btn  btn-outline btn-error rounded-md">Clear
+                                Cart</button>
+                        </div>
+                        <!-- calculation -->
+                        <div class="flex flex-col gap-2 bg-slate-400 p-4 rounded-md">
+                            <div class="flex justify-between text-lg">
+                                <p class="text-yellow-500 font-semibold">Product Count:</p>
+                                <p class="text-white font-semibold"><span id="product-count">0</span></p>
+                            </div>
+                            <div class="flex justify-between text-lg">
+                                <p class="text-yellow-500 font-semibold">Price:</p>
+                                <p class="text-white font-semibold">$ <span>0</span></p>
+                            </div>
+                            <div class="flex justify-between text-lg">
+                                <p class="text-yellow-500 font-semibold">Tax:</p>
+                                <p class="text-white font-semibold">$ <span>0</span></p>
+                            </div>
+                            <hr>
+                            <div class="flex justify-between text-lg">
+                                <p class="text-yellow-500 font-semibold">Total Price:</p>
+                                <p class="text-white font-semibold">$ <span>0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <!-- drawer starts here End -->
+    </main>
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content block mt-[55px]">
+        <div>
+            <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
